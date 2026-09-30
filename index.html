@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kt cloud AI CAMPUS | AI 데이터센터 인프라 엔지니어 양성과정</title>
+  <meta name="description" content="서버 하드웨어, InfiniBand 초고속 네트워크, GPU 가상화 클러스터링부터 kt cloud DBO(설계·구축·운영) 노하우까지 직접 완성하는 6개월 960시간 오프라인 과정" />
+  <meta property="og:title" content="kt cloud AI CAMPUS | AI 데이터센터 인프라 엔지니어 양성과정" />
+  <meta property="og:description" content="서버 하드웨어, InfiniBand 초고속 네트워크, GPU 가상화 클러스터링부터 kt cloud DBO 노하우까지 6개월 960시간 오프라인 전액 국비지원 과정" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+    body {
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background-color: #060a14;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+    .glow-cyan {
+      box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.25);
+    }
+    .glow-blue {
+      box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.25);
+    }
+    .bg-grid-pattern {
+      background-image: radial-gradient(rgba(14, 165, 233, 0.12) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    /* Scroll Animation (Fade & float gracefully on scroll up/down) */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .scroll-animate.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-cyan-500 selection:text-black">
+
+  <!-- ================= TOP NAVIGATION ================= -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#060a14]/90 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#overview" class="flex items-center">
+          <span class="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center whitespace-nowrap">
+            kt&nbsp;cloud&nbsp;<span class="text-cyan-400">AI&nbsp;CAMPUS</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#overview" class="hover:text-cyan-400 transition-colors">과정개요</a>
+          <a href="#headlines" class="hover:text-cyan-400 transition-colors">언론보도</a>
+          <a href="#trend" class="hover:text-cyan-400 transition-colors">산업트렌드</a>
+          <a href="#curriculum" class="hover:text-cyan-400 transition-colors">커리큘럼</a>
+          <a href="#capstone" class="hover:text-cyan-400 transition-colors">캡스톤프로젝트</a>
+          <a href="#career" class="hover:text-cyan-400 transition-colors">취업지원</a>
+          <a href="#benefits" class="hover:text-cyan-400 transition-colors">수강혜택</a>
+        </nav>
+
+        <!-- Right CTA Button -->
+        <div class="flex items-center gap-3">
+          <a
+            href="https://naver.me/xaT1r6l5"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-5 py-2.5 rounded-lg bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-xs sm:text-sm transition-all duration-200 shadow-md shadow-cyan-400/20 hover:shadow-cyan-400/40"
+          >
+            지금 지원하기
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="flex-1">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="overview" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-grid-pattern scroll-mt-20">
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-gradient-to-tr from-cyan-500/15 via-blue-600/20 to-indigo-600/10 blur-[130px] rounded-full pointer-events-none"></div>
+      <div class="absolute top-16 right-5 w-80 h-80 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+      <div class="absolute bottom-10 left-5 w-80 h-80 bg-blue-600/10 blur-[110px] rounded-full pointer-events-none"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Top Badges (Centered) -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-8 scroll-animate">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-cyan-300 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+            고용노동부 K-Digital Training
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-950/70 border border-blue-500/40 text-blue-300 text-xs font-semibold tracking-wide">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-400"></i>
+            100% 전액 국비지원 (자비부담금 0원)
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-semibold">
+            <i data-lucide="award" class="w-3.5 h-3.5 text-amber-400"></i>
+            kt cloud 채용 우대 혜택 과정
+          </span>
+        </div>
+
+        <!-- Main Titles (Centered) -->
+        <div class="max-w-4xl mx-auto text-center mb-12 scroll-animate">
+          <div class="inline-flex items-center justify-center gap-2 text-cyan-400 text-sm md:text-base font-bold tracking-widest uppercase mb-3">
+            <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400"></i>
+            kt cloud AI CAMPUS
+          </div>
+          
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.18] mb-6">
+            AI 데이터센터 인프라<br class="hidden sm:inline" />
+            <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-300 bg-clip-text text-transparent">
+              엔지니어 양성과정
+            </span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed font-normal max-w-3xl mx-auto">
+            서버 하드웨어, InfiniBand 초고속 네트워크, GPU 가상화 클러스터링부터<br class="hidden md:inline" />
+            <strong class="text-white font-semibold underline decoration-cyan-500/40 decoration-2 underline-offset-4">
+              kt cloud DBO(설계·구축·운영)
+            </strong> 노하우까지 직접 완성하는 6개월 960시간 오프라인 과정
+          </p>
+        </div>
+
+        <!-- Key Course Facts Cards (5-grid) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12 scroll-animate">
+          
+          <!-- Fact 1: 교육기간 -->
+          <div class="bg-[#0b132b]/85 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/40 transition-all rounded-2xl p-5 flex flex-col justify-between group shadow-lg shadow-black/30">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 font-medium mb-1">
+                <span>교육기간</span>
+                <i data-lucide="calendar" class="w-4 h-4 text-cyan-400/80"></i>
+              </div>
+              <div class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors tracking-tight">
+                26.11.04 ~ 27.05.07
+              </div>
+            </div>
+            <div class="text-xs text-cyan-400/90 mt-3 font-semibold">
+              총 6개월 (960시간)
+            </div>
+          </div>
+
+          <!-- Fact 2: 교육시간 -->
+          <div class="bg-[#0b132b]/85 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/40 transition-all rounded-2xl p-5 flex flex-col justify-between group shadow-lg shadow-black/30">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 font-medium mb-1">
+                <span>교육시간</span>
+                <i data-lucide="clock" class="w-4 h-4 text-blue-400/80"></i>
+              </div>
+              <div class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors tracking-tight">
+                평일 09:30~18:30
+              </div>
+            </div>
+            <div class="text-xs text-slate-400 mt-3 font-medium">
+              1일 8시간 (주 40시간)
+            </div>
+          </div>
+
+          <!-- Fact 3: 교육방법 -->
+          <div class="bg-[#0b132b]/85 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/40 transition-all rounded-2xl p-5 flex flex-col justify-between group shadow-lg shadow-black/30">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 font-medium mb-1">
+                <span>교육방법</span>
+                <i data-lucide="map-pin" class="w-4 h-4 text-emerald-400/80"></i>
+              </div>
+              <div class="text-lg font-bold text-cyan-400 group-hover:text-cyan-300 transition-colors tracking-tight">
+                100% 오프라인
+              </div>
+            </div>
+            <div class="text-xs text-slate-300 mt-3 font-medium">
+              대면 실습 전용 랩 운영
+            </div>
+          </div>
+
+          <!-- Fact 4: 자비부담금 -->
+          <div class="bg-[#0b132b]/85 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/40 transition-all rounded-2xl p-5 flex flex-col justify-between group shadow-lg shadow-black/30">
+            <div>
+              <div class="text-xs text-slate-400 font-medium mb-1">
+                자비부담금
+              </div>
+              <div class="text-2xl font-extrabold text-cyan-400 tracking-tight">
+                0원
+              </div>
+            </div>
+            <div class="text-xs text-slate-400 mt-3 font-medium leading-tight">
+              17,424,000원 정부지원
+            </div>
+          </div>
+
+          <!-- Fact 5: 훈련장려금 -->
+          <div class="bg-[#0b132b]/85 backdrop-blur-sm border border-slate-800 hover:border-cyan-500/40 transition-all rounded-2xl p-5 flex flex-col justify-between group sm:col-span-2 lg:col-span-1 shadow-lg shadow-black/30">
+            <div>
+              <div class="text-xs text-slate-400 font-medium mb-1">
+                훈련장려금
+              </div>
+              <div class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors tracking-tight">
+                매월 40만원 + α
+              </div>
+            </div>
+            <div class="text-[11px] text-emerald-400 mt-2 font-medium leading-tight">
+              국민취업지원제도 1유형 시 60만원 추가 지급
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Actions (Centered) -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 scroll-animate">
+          <a
+            href="https://naver.me/xaT1r6l5"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-black font-extrabold text-base hover:opacity-95 transition-all text-center shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5"
+          >
+            <span>지금 과정 지원하기 (선착순 마감)</span>
+            <i data-lucide="chevron-right" class="w-5 h-5 text-black"></i>
+          </a>
+        </div>
+
+        <!-- Quick Trust badges below buttons (Centered) -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs text-slate-400 scroll-animate">
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+            <span>서류 전형 &amp; 심층 면접 선발</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+            <span>국민내일배움카드 발급 시 0원 수강</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+            <span>kt cloud 공식 수료증 및 추천서 발급</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= KEY METRICS BAR ================= -->
+    <section class="border-y border-slate-800 bg-[#090f20]/90 py-8 relative scroll-animate">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          
+          <div class="p-4">
+            <div class="text-3xl lg:text-4xl font-extrabold text-cyan-400 font-mono tracking-tight">960h</div>
+            <div class="text-xs sm:text-sm font-semibold text-slate-200 mt-1">총 6개월 집중 훈련</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">실무 중심 오프라인 전일제</div>
+          </div>
+
+          <div class="p-4 border-l border-slate-800">
+            <div class="text-3xl lg:text-4xl font-extrabold text-blue-400 font-mono tracking-tight">316h</div>
+            <div class="text-xs sm:text-sm font-semibold text-slate-200 mt-1">실무 캡스톤 프로젝트</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">전체 훈련의 32.5% 투입</div>
+          </div>
+
+          <div class="p-4 border-l border-slate-800">
+            <div class="text-3xl lg:text-4xl font-extrabold text-emerald-400 font-mono tracking-tight">0원</div>
+            <div class="text-xs sm:text-sm font-semibold text-slate-200 mt-1">교육비 자비부담금</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">17,424,000원 전액 국비지원</div>
+          </div>
+
+          <div class="p-4 border-l border-slate-800">
+            <div class="text-3xl lg:text-4xl font-extrabold text-amber-400 font-mono tracking-tight">우대</div>
+            <div class="text-xs sm:text-sm font-semibold text-slate-200 mt-1">kt cloud 채용 가점</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">우수 수료생 추천 및 혜택</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INDUSTRY HEADLINES (언론보도) ================= -->
+    <section id="headlines" class="py-24 relative bg-[#060a14] overflow-hidden scroll-mt-20">
+      <div class="absolute top-1/2 left-0 w-96 h-96 bg-cyan-600/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header (Centered) -->
+        <div class="max-w-3xl mx-auto text-center mb-16 scroll-animate">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
+            <i data-lucide="newspaper" class="w-3.5 h-3.5 text-cyan-400"></i>
+            INDUSTRY HEADLINES
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            업계가 주목하는 인프라 대전환,<br class="hidden sm:inline" />
+            <span class="text-cyan-400">왜 지금 kt cloud인가?</span>
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            단순한 서버 관리를 넘어 6조 원 규모의 초대형 AIDC 구축과 첨단 자율운영 기술까지,<br class="hidden sm:inline" />
+            여러분이 실무에서 마주할 미래를 언론 보도로 확인하세요.
+          </p>
+        </div>
+
+        <!-- 3 Headline Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 scroll-animate">
+          
+          <!-- Card 1: 한국경제 -->
+          <div class="bg-[#0b1224] border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/10 group">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-slate-800/80">
+                <span class="font-bold text-slate-200 text-sm">한국경제</span>
+                <span class="font-mono text-slate-400">2026.09</span>
+              </div>
+              <div class="inline-block px-2.5 py-1 rounded-md bg-blue-950/80 text-blue-300 text-xs font-semibold mb-3 border border-blue-500/30">
+                6조 원 투자 · 1GW 공급
+              </div>
+              <h3 class="text-lg font-bold text-white leading-snug mb-4 group-hover:text-cyan-300 transition-colors">
+                KT, AI 데이터센터에 5년간 6조 투자⋯ 전국 20여 곳 AIDC 구축
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                2031년까지 전국에 1GW급 AIDC 인프라를 공급하며 수도권 거점 클러스터와 비수도권 글로벌 수요를 동시 공략합니다. 인프라 증설에 따른 대규모 엔지니어 수요가 집중됩니다.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-amber-400 flex items-center gap-1.5">
+                <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+                ⚡연계: Module 08 DBO 실무
+              </span>
+              <span class="text-slate-400 group-hover:text-cyan-400 transition-colors">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2: 아이뉴스24 -->
+          <div class="bg-[#0b1224] border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-500/10 group">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-slate-800/80">
+                <span class="font-bold text-slate-200 text-sm">아이뉴스24</span>
+                <span class="font-mono text-slate-400">2026.09</span>
+              </div>
+              <div class="inline-block px-2.5 py-1 rounded-md bg-cyan-950/80 text-cyan-300 text-xs font-semibold mb-3 border border-cyan-500/30">
+                액체냉각 · 사족보행 로봇
+              </div>
+              <h3 class="text-lg font-bold text-white leading-snug mb-4 group-hover:text-cyan-300 transition-colors">
+                액체냉각과 4족 보행 로봇(스팟) 도입, 자율운영형 AIDC로 진화
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                고집적 GPU 발열을 해소하는 차세대 액체냉각과 로봇 무인 점검, 초고속 InfiniBand 백본망을 결합해 국내 최고 수준의 AI 인프라 기술을 현장에 직접 구현합니다.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-cyan-400 flex items-center gap-1.5">
+                <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+                ⚡연계: Module 05 & 07 퍼실리티
+              </span>
+              <span class="text-slate-400 group-hover:text-cyan-400 transition-colors">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 3: 현대경제신문 -->
+          <div class="bg-[#0b1224] border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 group">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-slate-800/80">
+                <span class="font-bold text-slate-200 text-sm">현대경제신문</span>
+                <span class="font-mono text-slate-400">2026.06</span>
+              </div>
+              <div class="inline-block px-2.5 py-1 rounded-md bg-purple-950/80 text-purple-300 text-xs font-semibold mb-3 border border-purple-500/30">
+                카카오 협력 · AI Safety
+              </div>
+              <h3 class="text-lg font-bold text-white leading-snug mb-4 group-hover:text-cyan-300 transition-colors">
+                카카오, kt cloud와 맞손⋯ '카나나 세이프가드'로 안전한 AI 생태계 구축
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                카카오의 자체 AI 가드레일 기술과 kt cloud 인프라가 결합해 엔터프라이즈 기업들이 믿고 쓸 수 있는 안전하고 신뢰도 높은 클라우드 환경을 선도합니다.
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <span class="font-semibold text-purple-400 flex items-center gap-1.5">
+                <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+                ⚡연계: Module 04 & 06 통합 보안
+              </span>
+              <span class="text-slate-400 group-hover:text-cyan-400 transition-colors">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= INDUSTRY TRENDS (산업트렌드) ================= -->
+    <section id="trend" class="py-24 relative bg-[#070d1c] border-t border-slate-800 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header (Centered) -->
+        <div class="max-w-3xl mx-auto text-center mb-16 scroll-animate">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950/80 border border-blue-500/30 text-blue-400 text-xs font-bold tracking-widest uppercase mb-4">
+            <i data-lucide="line-chart" class="w-3.5 h-3.5 text-blue-400"></i>
+            INDUSTRY TREND
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            왜 AI 데이터센터 인프라여야 할까?
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            일반 웹 서비스를 넘어 대규모 연산과 LLM 분산 학습을 뒷받침하는<br class="hidden sm:inline" />
+            차세대 하드웨어·네트워크 엔지니어링 수요가 급증하고 있습니다.
+          </p>
+        </div>
+
+        <!-- 3 Trend Bento Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 scroll-animate">
+          
+          <!-- Trend 01 -->
+          <div class="relative bg-[#0a1224] rounded-2xl p-8 border border-slate-800 hover:border-cyan-500/40 transition-all duration-300 hover:-translate-y-1 group">
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-4xl font-extrabold text-cyan-400 font-mono tracking-tight">01</span>
+              <div class="p-3 rounded-xl bg-cyan-950/70 border border-cyan-500/30 text-cyan-400 group-hover:scale-110 transition-transform">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
+              폭발하는 GPU 클러스터 수요
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              초거대 AI 모델 학습을 위한 수백 대 이상의 GPU 노드 상호연결 및 가상화(MIG, vGPU) 분할 인프라 구축 역량이 필수가 되었습니다.
+            </p>
+            <div class="pt-4 border-t border-slate-800/80 text-xs text-slate-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+              <span>핵심 역량: Multi-GPU 슬라이싱 & 클러스터 구축</span>
+            </div>
+          </div>
+
+          <!-- Trend 02 -->
+          <div class="relative bg-[#0a1224] rounded-2xl p-8 border border-slate-800 hover:border-blue-500/40 transition-all duration-300 hover:-translate-y-1 group">
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-4xl font-extrabold text-blue-400 font-mono tracking-tight">02</span>
+              <div class="p-3 rounded-xl bg-blue-950/70 border border-blue-500/30 text-blue-400 group-hover:scale-110 transition-transform">
+                <i data-lucide="network" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors">
+              초고속 저지연 네트워크 혁신
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              전통적인 TCP/IP를 넘어 병목 없는 데이터 전송을 실현하는 InfiniBand, RDMA, RoCE 등 AI 특화 네트워크 전문가의 품귀 현상이 심화되고 있습니다.
+            </p>
+            <div class="pt-4 border-t border-slate-800/80 text-xs text-slate-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+              <span>핵심 역량: InfiniBand QSFP 케이블링 & 저지연 프로토콜</span>
+            </div>
+          </div>
+
+          <!-- Trend 03 -->
+          <div class="relative bg-[#0a1224] rounded-2xl p-8 border border-indigo-500/40 transition-all duration-300 hover:-translate-y-1 group">
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-4xl font-extrabold text-indigo-400 font-mono tracking-tight">03</span>
+              <div class="p-3 rounded-xl bg-indigo-950/70 border border-indigo-500/30 text-indigo-400 group-hover:scale-110 transition-transform">
+                <i data-lucide="thermometer-snowflake" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4 group-hover:text-indigo-300 transition-colors">
+              친환경 DBO & 퍼실리티 제어
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              고집적 발열 해소를 위한 액체 냉각, 공조(CFD), 전력(UPS) 효율화(PUE 개선)부터 데이터센터 기획·구축·운영 전반을 다루는 인재를 요구합니다.
+            </p>
+            <div class="pt-4 border-t border-slate-800/80 text-xs text-slate-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+              <span>핵심 역량: 액체냉각 시스템 & PUE 최적화</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= HANDS-ON VALUE ================= -->
+    <section id="hands-on" class="py-24 relative bg-[#060a14] overflow-hidden scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Main Hands-on Value Card (Big Titles Only) -->
+        <div class="bg-[#0a1120] border border-slate-800 rounded-3xl p-8 sm:p-12 relative overflow-hidden scroll-animate">
+          <div class="max-w-3xl mx-auto text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+              HANDS-ON VALUE
+            </div>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+              화면 너머로는 배울 수 없는<br />
+              <span class="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-300 bg-clip-text text-transparent">
+                100% 대면 실습의 압도적 깊이
+              </span>
+            </h2>
+          </div>
+
+          <!-- 3 Value Checks (Titles Only) -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            
+            <div class="flex items-center gap-4 p-6 rounded-2xl bg-[#0f172a]/80 border border-slate-800/90 hover:border-cyan-500/40 transition-all duration-300 group">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 font-extrabold text-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                ✓
+              </div>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  물리 인프라 직접 체득
+                </h3>
+                <span class="text-xs font-semibold text-cyan-400">
+                  Physical Hardware
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-6 rounded-2xl bg-[#0f172a]/80 border border-slate-800/90 hover:border-blue-500/40 transition-all duration-300 group">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/30 text-blue-400 font-extrabold text-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                ✓
+              </div>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                  실시간 협업 및 트러블슈팅
+                </h3>
+                <span class="text-xs font-semibold text-blue-400">
+                  Live Troubleshooting
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 p-6 rounded-2xl bg-[#0f172a]/80 border border-slate-800/90 hover:border-indigo-500/40 transition-all duration-300 group">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 font-extrabold text-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                ✓
+              </div>
+              <div>
+                <h3 class="text-lg sm:text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                  현장 즉각 피드백
+                </h3>
+                <span class="text-xs font-semibold text-indigo-400">
+                  Instant Expert Feedback
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3 Metric Highlight Box - Placed below HANDS-ON VALUE -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 scroll-animate">
+          
+          <div class="bg-gradient-to-b from-[#0f1c36] to-[#0a1326] border border-cyan-500/40 rounded-2xl p-8 text-center glow-cyan shadow-xl">
+            <div class="text-4xl sm:text-5xl font-extrabold text-cyan-400 mb-2 font-mono">100%</div>
+            <div class="text-lg font-bold text-white">오프라인 대면 실습</div>
+            <div class="text-xs sm:text-sm text-slate-300 mt-2">현장에서 직접 손으로 만지는 인프라 엔지니어링</div>
+          </div>
+
+          <div class="bg-gradient-to-b from-[#0f1c36] to-[#0a1326] border border-blue-500/40 rounded-2xl p-8 text-center glow-blue shadow-xl">
+            <div class="text-4xl sm:text-5xl font-extrabold text-blue-400 mb-2 font-mono">316시간</div>
+            <div class="text-lg font-bold text-white">실무 집중 캡스톤 프로젝트 편성</div>
+            <div class="text-xs sm:text-sm text-slate-300 mt-2">포트폴리오로 증명하는 차세대 AIDC 종합 구축 역량</div>
+          </div>
+
+          <div class="bg-gradient-to-b from-[#0f1c36] to-[#0a1326] border border-indigo-500/40 rounded-2xl p-8 text-center shadow-xl">
+            <div class="text-4xl sm:text-5xl font-extrabold text-indigo-400 mb-2 font-mono">1:1</div>
+            <div class="text-lg font-bold text-white">현장 전담 강사 및 멘토 밀착 케어</div>
+            <div class="text-xs sm:text-sm text-slate-300 mt-2">비전공자도 실무자로 도약하는 완벽 밀착 코칭</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CURRICULUM ROADMAP (ACCORDION) ================= -->
+    <section id="curriculum" class="py-24 relative bg-[#070d1a] border-t border-slate-800 scroll-mt-20">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header (Centered) -->
+        <div class="max-w-3xl mx-auto text-center mb-12 scroll-animate">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
+            <i data-lucide="book-open" class="w-3.5 h-3.5 text-cyan-400"></i>
+            CURRICULUM ROADMAP
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            체계적인 6개월 960시간<br />
+            <span class="text-cyan-400">단계별 실무 커리큘럼</span>
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base mt-2">
+            각 모듈명을 클릭하시면 상세 학습 내용과 실습 항목을 확인하실 수 있습니다.
+          </p>
+
+          <!-- Expand / Collapse Control Buttons -->
+          <div class="flex items-center justify-center gap-2 mt-6">
+            <button
+              onclick="toggleAllAccordions(true)"
+              class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 transition-colors border border-slate-700 cursor-pointer"
+            >
+              전체 펼치기
+            </button>
+            <button
+              onclick="toggleAllAccordions(false)"
+              class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-400 transition-colors border border-slate-700 cursor-pointer"
+            >
+              전체 닫기
+            </button>
+          </div>
+        </div>
+
+        <!-- 10 Accordion Modules Container -->
+        <div class="space-y-3.5 scroll-animate" id="curriculum-container">
+
+          <!-- Module 01 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m01')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 01
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  데이터센터 이해 및 네트워크 기본
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m01" class="w-5 h-5 text-slate-400 transition-transform duration-300 rotate-180"></i>
+            </button>
+            <div id="content-m01" class="px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                안정적인 서비스 제공을 위한 데이터센터 네트워크 구축의 시작
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+                  <span>일반 데이터센터와 AI 데이터센터의 구조적 비교 분석</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+                  <span>데이터센터 구축을 위한 네트워크 기본 기술</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+                  <span>데이터센터 네트워크(EVPN, VxLAN, SDN) 심층 실습</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+                  <span>AI에 특화된 초고속 네트워크(InfiniBand, RDMA)</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i>
+                  <span>안정적인 데이터센터 운영을 위한 라우팅, 스위칭, QoS 기술</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 02 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m02')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 02
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  리눅스 서버 시스템 관리 & 자동화
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m02" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m02" class="hidden px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                AI클러스터 구현을 위한 리눅스 기술의 기본 및 자동화 활용
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>서버 하드웨어 종류 파악 및 리눅스 OS 설치·파일시스템 관리</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>사용자 및 그룹 권한 관리</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>리눅스를 활용한 기본 서버 인프라 구축(Web, NFS, DB, DNS)</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>리눅스 기반 서버 성능 분석과 운영 관리 기술</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>리눅스 기반의 서버 자동화 기술(Bash 스크립팅, Ansible)</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 03 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m03')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 03
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  가상화 기반 인프라 구축
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m03" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m03" class="hidden px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                서버 자원의 가상화 및 클라우드 서비스 기초 역량 확보
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>서버 가상화 기술(KVM, Proxmox)의 이해 및 실습</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>가상 머신(VM) 프로비저닝 및 자원 할당</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>가상 스위치와 브리지 네트워킹 구성</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>클라우드 IaaS(kt cloud 인프라)와 가상화 기술 비교 분석</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 04 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m04')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 04
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  데이터센터 보안 기초 & 통합 관제
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m04" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m04" class="hidden px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                서버/네트워크 보안 강화 및 인프라 침해사고 방지 체계
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>방화벽(Firewall, iptables, ufw) 및 침입탐지(IDS/IPS) 기초</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>접근 제어(RBAC, SSH Key 체계) 및 통제 정책 수립</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>로그 분석 도구(ELK Stack)를 통한 이상 징후 실시간 모니터링</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>데이터 암호화 기술 및 HashiCorp Vault 기반 시크릿 관리</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 05 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m05')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 05
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  데이터센터 퍼실리티(Facility) 이해
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m05" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m05" class="hidden px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                전력, 공조, 방재 등 물리적 데이터센터 시설 구조의 총체적 이해
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>수전 설비, 변압기, 무정전 전원장치(UPS) 및 비상발전기</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>항온항습기(CRAC/CRAH) 및 기류 제어(Cold/Hot Aisle 차폐)</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>고발열 GPU 대응 차세대 액체 냉각(Direct-to-Chip, Immersion Cooling)</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>에너지 효율 지표 PUE(Power Usage Effectiveness) 측정 및 개선 실무</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 06 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m06')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 06
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  스토리지 시스템 구축 & 데이터 파이프라인
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m06" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m06" class="hidden px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                초대용량 AI 데이터 처리 및 고성능 스토리지 클러스터 설계
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>DAS, NAS, SAN 아키텍처 비교 및 엔터프라이즈 환경 구축</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>분산 파일 시스템(Ceph, GlusterFS) 심층 구축 실습</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>NVMe-oF(NVMe over Fabrics)를 활용한 초저지연 I/O 가속</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>데이터 백업, 스냅샷, 재해복구(DR) 자동화 정책 수립</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 07 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m07')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 07
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  GPU 서버 인프라 및 가상화
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m07" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m07" class="hidden px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                AI 가속 연산을 위한 NVIDIA GPU 인프라 구축 및 자원 최적화
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>NVIDIA GPU 하드웨어 아키텍처 및 드라이버/CUDA 툴킷 설치</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>GPU 가상화 기술(NVIDIA vGPU, MIG)을 활용한 자원 분할</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>멀티 GPU 클러스터 간 통신 가속(NCCL, GPUDirect RDMA)</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>DCGM(Data Center GPU Manager) 기반 성능 모니터링</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 08 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m08')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 08
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  kt cloud DBO(설계·구축·운영) 실무
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m08" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m08" class="hidden px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                국내 최고 클라우드 사업자 kt cloud의 엔터프라이즈 운영 노하우 체득
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>kt cloud DBO 프레임워크 이해 및 단계별 핵심 요구사항</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>인프라 설계(Design): 용량 산정, 고가용성(HA) 구조, 네트워크 토폴로지</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>인프라 구축(Build): 랙 실장, 케이블링, OS/미들웨어 대규모 자동 배포</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>인프라 운영(Operate): SLA 준수, 장애 전파 체계, 정기 점검 자동화</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 09 -->
+          <div class="accordion-item rounded-2xl border border-slate-800 bg-[#0a1224] overflow-hidden transition-all duration-200">
+            <button
+              onclick="toggleAccordion('m09')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-950/80 text-cyan-300 border border-cyan-500/30">
+                  Module 09
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  컨테이너 오케스트레이션(Kubernetes)
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m09" class="w-5 h-5 text-slate-400 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m09" class="hidden px-6 pb-6 pt-2 border-t border-slate-800/80">
+              <div class="text-sm text-cyan-400 font-medium mb-3">
+                클라우드 네이티브 환경의 핵심, 쿠버네티스 기반 워크로드 관리
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>Docker 컨테이너 빌드, 최적화 및 레지스트리 운영</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>Kubernetes 클러스터 아키텍처 및 직접 구축 실습</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>NVIDIA GPU Operator 연동 및 AI 워크로드 스케줄링</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>Prometheus & Grafana를 활용한 풀스택 모니터링 대시보드</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Module 10 (Capstone) -->
+          <div class="accordion-item rounded-2xl border border-cyan-500/50 bg-[#0c1830] overflow-hidden transition-all duration-200 glow-cyan">
+            <button
+              onclick="toggleAccordion('m10')"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-slate-800/40 transition-colors cursor-pointer"
+            >
+              <div class="flex items-center gap-4">
+                <span class="px-3 py-1 rounded-md text-xs font-bold font-mono bg-cyan-400 text-black">
+                  Module 10 (통합 캡스톤)
+                </span>
+                <span class="text-base sm:text-lg font-bold text-white">
+                  GPU 클러스터 기반 자원 배포 자동화 프로젝트
+                </span>
+              </div>
+              <i data-lucide="chevron-down" id="icon-m10" class="w-5 h-5 text-cyan-300 transition-transform duration-300"></i>
+            </button>
+            <div id="content-m10" class="hidden px-6 pb-6 pt-2 border-t border-cyan-500/30">
+              <div class="text-sm text-cyan-300 font-medium mb-3">
+                전체 훈련 시간의 32.5%를 투입하여 완성하는 실무 수준의 AI 인프라 프로젝트
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300">
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>실제 기업 환경 수준의 고가용성 AI GPU 클러스터 및 네트워크 설계</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>스토리지 클러스터 및 컨테이너 오케스트레이션 자원 배포 자동화</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>부하 테스트, 장애 복구(Failover) 시나리오 검증 및 Kepler 기반 에너지 효율 분석</span></li>
+                <li class="flex items-start gap-2.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 mt-0.5 shrink-0"></i><span>kt cloud 현직 엔지니어의 피드백을 반영한 최종 포트폴리오 완성 및 발표</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CAPSTONE PROJECTS ================= -->
+    <section id="capstone" class="py-24 relative bg-[#060a14] border-t border-slate-800 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header (Centered) -->
+        <div class="max-w-3xl mx-auto text-center mb-16 scroll-animate">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
+            <i data-lucide="layers" class="w-3.5 h-3.5 text-cyan-400"></i>
+            CAPSTONE PROJECT
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            전체 과정의 32.5%, <span class="text-cyan-400">316시간 몰입형 프로젝트</span>
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            현업 아키텍처 수준의 프로젝트를 직접 설계하고 구축하여 독보적인 취업 포트폴리오를 만듭니다.
+          </p>
+        </div>
+
+        <!-- 3 Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 scroll-animate">
+          
+          <div class="bg-[#0b132b]/90 border border-slate-800 hover:border-cyan-500/50 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+                <span class="font-bold text-cyan-400 font-mono tracking-wider">PROJECT 01</span>
+                <i data-lucide="cpu" class="w-5 h-5 text-cyan-400"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-3 leading-snug">
+                초거대 AI 분산 학습을 위한 InfiniBand GPU 클러스터 구축
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                NCCL 및 RoCE/InfiniBand를 결합하여 노드 간 통신 지연을 최소화한 고가용성 AI 클러스터를 배포하고 성능을 벤치마킹합니다.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">InfiniBand</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">NVIDIA MIG</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">Kubernetes</span>
+            </div>
+          </div>
+
+          <div class="bg-[#0b132b]/90 border border-slate-800 hover:border-blue-500/50 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+                <span class="font-bold text-blue-400 font-mono tracking-wider">PROJECT 02</span>
+                <i data-lucide="database" class="w-5 h-5 text-blue-400"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-3 leading-snug">
+                Ceph 분산 스토리지 연동 MLOps 데이터 파이프라인 인프라
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                대용량 멀티모달 데이터 처리를 위해 S3/Ceph RGW 오브젝트 스토리지를 구성하고 고속 I/O 처리가 가능한 파이프라인을 구축합니다.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">Ceph</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">MinIO</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">Docker</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">Prometheus</span>
+            </div>
+          </div>
+
+          <div class="bg-[#0b132b]/90 border border-slate-800 hover:border-purple-500/50 rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1">
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-400 mb-4">
+                <span class="font-bold text-purple-400 font-mono tracking-wider">PROJECT 03</span>
+                <i data-lucide="shield-check" class="w-5 h-5 text-purple-400"></i>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-3 leading-snug">
+                PUE 에너지 최적화 및 Vault 보안이 적용된 하이브리드 IDC 설계
+              </h3>
+              <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                Kepler를 통한 탄소/전력 사용량 실시간 관제 시스템과 HashiCorp Vault 기반 시크릿 보안 체계를 결합한 엔터프라이즈 인프라를 완성합니다.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800">
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">Kepler</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">Grafana</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">Vault</span>
+              <span class="px-2.5 py-1 rounded bg-slate-800 text-slate-300 text-xs font-medium">kt cloud IaaS</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= CAREER SUPPORT (취업지원) ================= -->
+    <section id="career" class="py-24 relative bg-[#070d1c] border-t border-slate-800 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header (Centered) -->
+        <div class="max-w-3xl mx-auto text-center mb-16 scroll-animate">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
+            <i data-lucide="briefcase" class="w-3.5 h-3.5 text-cyan-400"></i>
+            CAREER SUPPORT
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            목표를 현실로 만드는<br class="hidden sm:inline" />
+            <span class="text-cyan-400">맞춤형 커리어 지원</span>
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            kt cloud 현직자와 함께 실무 역량을 검증받고 확실한 취업 경쟁력을 확보합니다.
+          </p>
+        </div>
+
+        <!-- 5 Career Supports Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-animate">
+          
+          <div class="bg-[#0a1224] border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">kt cloud 현직자 멘토링</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">현직 전문가와의 1:1 혹은 그룹 멘토링을 통해 실무 경험과 진로 방향에 대한 깊이 있는 인사이트를 얻습니다.</p>
+          </div>
+
+          <div class="bg-[#0a1224] border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="presentation" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">kt cloud 현직자 특강</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">업계 전문가들이 직접 전하는 생생한 현장 사례와 최신 기술 동향을 통해 직무 역량을 배울 수 있습니다.</p>
+          </div>
+
+          <div class="bg-[#0a1224] border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="code-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">kt cloud 현직자 코드리뷰</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">현업 개발자에게 코드 품질과 구조에 대한 피드백을 받아 실무 수준의 개발 역량을 빠르게 성장시킬 수 있습니다.</p>
+          </div>
+
+          <div class="bg-gradient-to-br from-[#0c1e3a] to-[#0a1224] border border-cyan-500/50 rounded-2xl p-7 transition-all glow-cyan md:col-span-2 lg:col-span-1">
+            <div class="w-12 h-12 rounded-xl bg-cyan-400/20 border border-cyan-400/40 text-cyan-300 flex items-center justify-center mb-5">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <div class="inline-block px-2.5 py-0.5 rounded text-[11px] font-bold bg-cyan-400 text-black mb-2">핵심 혜택</div>
+            <h3 class="text-lg font-bold text-white mb-2">우수 수료생 채용 지원 시 우대</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">탁월한 성과를 인정받은 우수 수료생은 kt cloud 채용 과정에서 우대 혜택을 받아 취업 경쟁력을 높일 수 있습니다.</p>
+          </div>
+
+          <div class="bg-[#0a1224] border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all md:col-span-2 lg:col-span-2">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="file-text" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">이력서, 포트폴리오 컨설팅</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">체계적인 피드백을 통해 직무에 맞는 이력서와 포트폴리오를 완성도 있게 준비할 수 있습니다.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= BENEFITS (수강혜택) ================= -->
+    <section id="benefits" class="py-24 relative bg-[#060a14] border-t border-slate-800 scroll-mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header (Centered) -->
+        <div class="max-w-3xl mx-auto text-center mb-16 scroll-animate">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
+            <i data-lucide="gift" class="w-3.5 h-3.5 text-cyan-400"></i>
+            BENEFITS
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            학습을 돕는 지원부터<br class="hidden sm:inline" />
+            <span class="text-cyan-400">성장을 이끄는 혜택까지</span>
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            훈련생이 온전히 학습과 프로젝트에만 몰입할 수 있도록 아낌없이 지원합니다.
+          </p>
+        </div>
+
+        <!-- 6 Benefits Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 scroll-animate">
+          
+          <div class="bg-[#0b132b]/80 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="monitor" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">오프라인 교육</h3>
+            <p class="text-sm text-slate-300 whitespace-pre-line leading-relaxed">다양한 협업 툴을 통한&#10;최적의 교육환경 제공</p>
+          </div>
+
+          <div class="bg-[#0b132b]/80 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="cloud" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">프로젝트 비용 지원</h3>
+            <p class="text-sm text-slate-300 whitespace-pre-line leading-relaxed">팀 프로젝트의 성장을 위해&#10;클라우드 비용을 지원합니다.</p>
+          </div>
+
+          <div class="bg-[#0b132b]/80 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="bot" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">생성형 AI 도구 지원</h3>
+            <p class="text-sm text-slate-300 whitespace-pre-line leading-relaxed">AI와 함께라면&#10;학습이 더 빠르고 똑똑해집니다.</p>
+          </div>
+
+          <div class="bg-[#0b132b]/80 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="book-marked" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">훈련 교재 제공</h3>
+            <p class="text-sm text-slate-300 whitespace-pre-line leading-relaxed">학습 및 지식 성장을 위해 선정된&#10;전문 서적을 제공합니다.</p>
+          </div>
+
+          <div class="bg-[#0b132b]/80 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-5">
+              <i data-lucide="trophy" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">성장 격려금 제공</h3>
+            <p class="text-sm text-slate-300 whitespace-pre-line leading-relaxed">대회 수상 시 성장 격려금으로&#10;최대 50만원 제공됩니다.</p>
+          </div>
+
+          <div class="bg-[#0b132b]/80 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-7 transition-all glow-cyan">
+            <div class="w-12 h-12 rounded-xl bg-cyan-400/20 border border-cyan-400/30 text-cyan-300 flex items-center justify-center mb-5">
+              <i data-lucide="coins" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">훈련 장려금 제공</h3>
+            <p class="text-sm text-slate-300 whitespace-pre-line leading-relaxed">성장과 연계된 장려금으로 월 최대 300,000원의&#10;훈련장려금이 지급됩니다.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#03060c] border-t border-slate-800/80 pt-16 pb-28 sm:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800/80 text-xs text-slate-400">
+        
+        <!-- Col 1: Brand & Desc -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="text-lg font-black tracking-tight text-white flex items-center whitespace-nowrap">
+            kt&nbsp;cloud&nbsp;<span class="text-cyan-400">AI&nbsp;CAMPUS</span>
+          </div>
+          <p class="text-slate-300 text-xs leading-relaxed max-w-sm">
+            AI 데이터센터 인프라 엔지니어 양성과정은 실무 중심의 하드웨어, 초고속 네트워크, GPU 가상화 및 DBO 노하우를 갖춘 차세대 핵심 엔지니어를 양성합니다.
+          </p>
+          <div class="pt-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-slate-800 text-slate-300 text-[11px] font-semibold border border-slate-700">
+              고용노동부 K-Digital Training 공인 과정
+            </span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="space-y-3">
+          <div class="text-white font-bold text-xs uppercase tracking-wider">
+            과정 메뉴
+          </div>
+          <ul class="space-y-2">
+            <li><a href="#overview" class="hover:text-cyan-400 transition-colors">과정개요</a></li>
+            <li><a href="#headlines" class="hover:text-cyan-400 transition-colors">언론보도</a></li>
+            <li><a href="#trend" class="hover:text-cyan-400 transition-colors">산업트렌드</a></li>
+            <li><a href="#curriculum" class="hover:text-cyan-400 transition-colors">커리큘럼 로드맵</a></li>
+            <li><a href="#capstone" class="hover:text-cyan-400 transition-colors">캡스톤 프로젝트</a></li>
+            <li><a href="#career" class="hover:text-cyan-400 transition-colors">취업지원 프로그램</a></li>
+            <li><a href="#benefits" class="hover:text-cyan-400 transition-colors">수강생 지원혜택</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Management Info -->
+        <div class="space-y-3">
+          <div class="text-white font-bold text-xs uppercase tracking-wider">
+            운영 관리
+          </div>
+          <div class="space-y-2 text-slate-300">
+            <p class="font-semibold text-slate-200">홈페이지 운영/관리자: 최수진</p>
+            <p class="text-slate-400 text-[11px] leading-relaxed">
+              본 과정은 고용노동부 직업능력개발훈련 규정에 따라 운영되며 공인 교육기관 및 전담 멘토진이 함께합니다.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= STICKY BOTTOM BAR ================= -->
+  <aside class="fixed bottom-0 left-0 right-0 z-40 bg-[#060a14]/95 backdrop-blur-md border-t border-slate-800 py-3.5 px-4 shadow-2xl">
+    <div class="max-w-7xl mx-auto flex flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm">
+        <span class="inline-flex items-center justify-center w-2.5 h-2.5 rounded-full bg-cyan-400 animate-ping"></span>
+        <span class="font-bold text-white tracking-tight">
+          kt cloud AI CAMPUS <strong class="text-cyan-400 font-extrabold ml-1">자비부담금 0원</strong>
+        </span>
+      </div>
+
+      <a
+        href="https://naver.me/xaT1r6l5"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-1.5 px-5 sm:px-7 py-2.5 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-black font-extrabold text-xs sm:text-sm transition-all shadow-md shadow-cyan-400/25 shrink-0"
+      >
+        <span>지금 지원하기</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-black"></i>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Accordion functionality for Curriculum
+    function toggleAccordion(id) {
+      const content = document.getElementById('content-' + id);
+      const icon = document.getElementById('icon-' + id);
+      if (!content || !icon) return;
+
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    function toggleAllAccordions(open) {
+      const ids = ['m01', 'm02', 'm03', 'm04', 'm05', 'm06', 'm07', 'm08', 'm09', 'm10'];
+      ids.forEach(id => {
+        const content = document.getElementById('content-' + id);
+        const icon = document.getElementById('icon-' + id);
+        if (!content || !icon) return;
+        if (open) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        } else {
+          content.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+        }
+      });
+    }
+
+    // Scroll-triggered Reversible Animation on both scroll down and scroll up
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+          } else {
+            // Reversible animation: disappears when scrolling away
+            entry.target.classList.remove('animated');
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
